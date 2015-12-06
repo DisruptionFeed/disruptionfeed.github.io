@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Disruption Feed</title>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" media="screen" charset="utf-8">
+        <link rel="stylesheet" href="css/main.css" media="screen" charset="utf-8">
+    </head>
+    <body>
+    <nav class="navbar navbar-default navbar-static-top">
+        <div class="container">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">DISRUP</a>
+            </div>
+
+                <ul class="nav navbar-nav navbar-right navbar-collapse collapse" id='topmenu'>
+                    <li><a href="#mission">Mission</a></li>
+                    <li><a href="#journey">Journey</a></li>
+                    <li><a href="#project">Project</a></li>
+                    <li><a href="#team">Team</a></li>
+                </ul>
+
+        </div>
+    </nav>
+
+    <section id="hero">
+        <h1>solving data problems in the railway industry</h1>
+    </section>
+
+    <section class='under-hero'>
+        <h3>take the trip</h3>
+    </section>
+
+    <section id='mission'>
+        <div class="container">
+            <h1>Our mission</h1>
+            <p>
+                Our mission is to improve the generation, use and sharing of data within the UK railway industry.
+            </p>
+        </div>
+    </section>
+
+    <section id='journey'>
+        <div class="container">
+            <h1>Our <span>journey</span></h1>
+            <p>
+                HackTrain hackathon -> PostHackathon -> Accelerator
+            </p>
+        </div>
+    </section>
+
+    <section id='project'>
+        <div class="container">
+            <h1>The project <span>Disruption Feed</span></h1>
+            <p>
+                We're trying to improve rail disruption APIs, and build visualisations for customers.
+            </p>
+        </div>
+    </section>
+
+
+
+    <section id='team'>
+        <div class="container">
+            <h1>Meet the<span>Team</span></h1>
+
+            <article class='col-sm-3'>
+                <img src="img/jana.png" alt="Jana" />
+                <h3><a href='mailto:jana@disrup.co.uk'>Jana</a></h3>
+            </article>
+
+            <article class='col-sm-3'>
+                <img src="img/fotis.png" alt="Fotis" />
+                <h3><a href='mailto:fotis@disrup.co.uk'>Fotis</a></h3>
+            </article>
+
+            <article class='col-sm-3'>
+                <img src="img/patrick.png" alt="Patrick" />
+                <h3><a href='mailto:patrick@disrup.co.uk'>Patrick</a></h3>
+            </article>
+
+            <article class='col-sm-3'>
+                <img src="img/vlad.png" alt="Vlad" />
+                <h3><a href='mailto:vlad@disrup.co.uk'>Vlad</a></h3>
+            </article>
+
+        </div>
+    </section>
+
+    <section class='more-space'>
+        <h3><a href='mailto:hello@disrup.co.uk'>hello@disrup.co.uk</a></h3>
+    </section>
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
+    <script type='text/javascript'>
+        // Cache selectors
+        var topMenu = $("#topmenu"),
+            topMenuHeight = 0,
+            // All list items
+            menuItems = topMenu.find('a[href^="#"]'),
+            // Anchors corresponding to menu items
+            scrollItems = menuItems.map(function(){
+              var item = $($(this).attr("href"));
+              if (item.length) { return item; }
+            });
+
+        // Bind to scroll
+        $(window).scroll(function(){
+           // Get container scroll position
+           var fromTop = $(this).scrollTop()+topMenuHeight+5;
+
+           // Get id of current scroll item
+           var cur = scrollItems.map(function(){
+             if ($(this).offset().top < fromTop)
+               return this;
+           });
+           // Get the id of the current element
+           cur = cur[cur.length-1];
+           var id = cur && cur.length ? cur[0].id : "";
+           // Set/remove active class
+           menuItems
+             .parent().removeClass("active")
+             .end().filter("[href=#"+id+"]").parent().addClass("active");
+        });
+    </script>
+    </body>
+</html>
