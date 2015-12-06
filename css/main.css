@@ -37,7 +37,7 @@ section {
 
 #hero {
     display: flex;
-    height: 90%;
+    height: 70%;
     margin: 0 !important;
 }
 
@@ -70,6 +70,10 @@ section {
 
 .under-hero h3::after {
     content: '}'
+}
+
+.under-hero a {
+    color: inherit !important;
 }
 
 .more-space {
