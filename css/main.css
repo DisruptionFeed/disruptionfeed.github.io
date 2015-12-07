@@ -7,6 +7,7 @@ html, body {
 .navbar-static-top {
     margin: 0;
     background: #fff;
+    z-index: 999;
 }
 
 ul.nav > li > a {
@@ -24,7 +25,7 @@ ul.nav > li.active > a {
     background: inherit!important;
 }
 
-@media (min-width:992px) {
+@media (min-width:768px) {
 
     body {padding-top:50px;}
     .navbar-static-top {position:fixed;top:0;right:0;left:0;}
@@ -97,6 +98,10 @@ section {
     color: inherit !important;
 }
 
+section h4 {
+    text-align: center;
+}
+
 section > div > h1 {
     text-align: center;
 }
@@ -130,6 +135,23 @@ section > div > h1 > span {
     border-left: 2px solid #f00;
     margin-left: 0.5em;
     padding-left: 0.5em;
+}
+
+.subproject {
+    min-height: 700px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#data-form {
+    transform: perspective( 600px ) rotateY( 25deg );
+    width: 100%;
+}
+
+#team {
+    min-height: 100%;
 }
 
 #team article {

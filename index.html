@@ -15,7 +15,7 @@
 
                 <ul class="nav navbar-nav navbar-right navbar-collapse collapse" id='topmenu'>
                     <li><a href="#mission">Mission</a></li>
-                    <li><a href="#journey">Journey</a></li>
+                    <!--<li><a href="#journey">Journey</a></li>-->
                     <li><a href="#project">Project</a></li>
                     <li><a href="#team">Team</a></li>
                 </ul>
@@ -40,21 +40,60 @@
         </div>
     </section>
 
-    <section id='journey'>
+    <!--<section id='journey'>
         <div class="container">
             <h1>Our<span>journey</span></h1>
             <p>
                 HackTrain hackathon -> PostHackathon -> Accelerator
             </p>
         </div>
-    </section>
+    </section>-->
 
     <section id='project'>
         <div class="container">
             <h1>The project<span>Disruption Feed</span></h1>
-            <p>
+            <h4>
                 We're trying to improve rail disruption APIs, and build visualisations for customers.
-            </p>
+            </h4>
+
+            <article class="subproject">
+                <div style='width:40%;'>
+                    <img src="assets/form.png" alt="" id='data-form' />
+                </div>
+                <div style='width:30%;'>
+                    <h2>Data entry point</h2>
+                    <p>
+                        The data is currently wrote for people. APIs are for machines.
+                        Historically, developers have relied on <strong>unreliable hacks</strong> to build systems around it.
+                    </p>
+                    <p>
+                        We're attacking the <strong>root of this problem</strong> - the data entry point. We aim to
+                        help build a backwards-compatible system that has <strong>structured data</strong>
+                        that's easy for developers to use.
+                    </p>
+                </div>
+            </article>
+
+            <article class="subproject">
+                <div style='width:30%;'>
+                    <h2>Visualisations</h2>
+                    <p>
+                        Using structured disruption data we build visualisations for passangers,
+                        personalised calendar feeds, and even tools for members of the staff.
+                    </p>
+                    <p>
+                        On the right is our map example, built during the HackTrain hackathon. <em>Uses made up disruptions for demonstration only.</em>
+                    </p>
+                    <p>
+                        <select id='from_station'></select>
+                        <select id='to_station'></select>
+                    </p>
+                </div>
+                <div style='width:40%; height:500px;' id='map'>
+
+                </div>
+            </article>
+
         </div>
     </section>
 
@@ -62,33 +101,32 @@
         <div class="container">
             <h1>Meet the<span>Team</span></h1>
 
-            <article class='col-sm-3'>
+            <article class='col-md-3 col-xs-6'>
                 <img src="assets/jana.jpg" alt="Jana" />
                 <h3><a href='mailto:jana@disrup.co.uk'>Jana</a></h3>
             </article>
 
-            <article class='col-sm-3'>
+            <article class='col-md-3 col-xs-6'>
                 <img src="assets/fotis.png" alt="Fotis" />
                 <h3><a href='mailto:fotis@disrup.co.uk'>Fotis</a></h3>
             </article>
 
-            <article class='col-sm-3'>
+            <article class='col-md-3 col-xs-6'>
                 <img src="assets/patrick.png" alt="Patrick" />
                 <h3><a href='mailto:patrick@disrup.co.uk'>Patrick</a></h3>
             </article>
 
-            <article class='col-sm-3'>
+            <article class='col-md-3 col-xs-6'>
                 <img src="assets/vlad.jpg" alt="Vlad" />
                 <h3><a href='mailto:vlad@disrup.co.uk'>Vlad</a></h3>
             </article>
 
+            <section class='more-space' style='margin-top:300px;'>
+                <h3><a href='mailto:hello@disrup.co.uk'>hello@disrup.co.uk</a></h3>
+            </section>
         </div>
-    </section>
 
-    <section class='more-space'>
-        <h3><a href='mailto:hello@disrup.co.uk'>hello@disrup.co.uk</a></h3>
     </section>
-
     <script src="https://code.jquery.com/jquery-2.1.4.min.js" charset="utf-8"></script>
     <script type='text/javascript'>
         // Cache selectors
@@ -121,5 +159,13 @@
              .end().filter("[href=#"+id+"]").parent().addClass("active");
         });
     </script>
+
+    <script src="js/sigma.min.js" charset="utf-8"></script>
+    <script src="js/sigma.plugins.animate.min.js" charset="utf-8"></script>
+    <script src="js/sigma.layout.forceAtlas2.min.js" charset="utf-8"></script>
+    <script src="js/sigma.plugins.dragNodes.min.js" charset="utf-8"></script>
+    <script src="js/sigma.pathfinding.astar.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+
     </body>
 </html>
