@@ -112,6 +112,8 @@ section > div > h1 > span {
 
 #mission { height: 100%; }
 
+#mission h1 { margin: 0; }
+
 #mission > div {
     display: flex;
     align-items: center;
