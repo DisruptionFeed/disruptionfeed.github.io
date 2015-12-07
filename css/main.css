@@ -237,7 +237,7 @@ section > div > h1 > span {
   background: rgb(248,248,248);
   padding: 6px 10px;
   border-radius: 5px;
-  
+  font-size: 1.2em;
   font-weight: 600;
   text-align: left;
 }
@@ -328,7 +328,7 @@ section > div > h1 > span {
 .desc {
   margin: 1em 0.75em 0 0;
   
-  font-size: 0.77777em;
+  font-size: 1em;
   font-style: italic;
   line-height: 1.5em;
 }
