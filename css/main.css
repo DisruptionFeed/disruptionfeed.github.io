@@ -70,7 +70,7 @@ section {
 }
 
 .under-hero h3::after {
-    content: '}'
+    content: '},'
 }
 
 .under-hero a {
