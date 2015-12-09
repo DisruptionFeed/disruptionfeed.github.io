@@ -121,26 +121,14 @@ section > div > h1 > span {
     border-left: 2px solid #ff5722;
 }
 
-#mission { height: 100%; }
-
-
-/*#mission > div {
+#mission {
+    height: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    height:100%;
-}*/
+}
 
-/*#mission p {
-    display: block;
-    width: auto;
-    font-size: 36px;
-    font-style: italic;
-    max-width: 500px;
-    border-left: 2px solid #f00;
-    margin-left: 0.5em;
-    padding-left: 0.5em;
-}*/
+#mission h2 { text-align: center; }
 
 .subproject {
     min-height: 700px;
@@ -156,7 +144,7 @@ section > div > h1 > span {
 }
 
 #team {
-    min-height: 100%;
+    padding-top: 200px;
 }
 
 #team article {
@@ -168,6 +156,7 @@ section > div > h1 > span {
     max-width: 200px;
     max-height: 200px;
 }
+
 
 #team a {
     color: inherit !important;
